@@ -227,6 +227,8 @@ bindsym $mod+alt+space exec wofi --show drun
 
 include /etc/sway/config.d/*
 
+exec export XDG_DATA_DIRS=$XDG_DATA_DIRS:/home/kevin/.local/share/applications
+
 # Window borders
 gaps inner 5
 smart_gaps on
@@ -236,6 +238,7 @@ hide_edge_borders smart
 
 #output 'eDP-1' scale 1.1
 
+exec ~/.local/share/tresorit/tresorit-cli start
 exec pipewire &
 exec pipewire-pulse &
 exec pipewire-media-session &
