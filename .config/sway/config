@@ -237,9 +237,11 @@ default_border pixel 1
 default_floating_border normal
 hide_edge_borders smart
 
-#output 'eDP-1' scale 1.1
+output 'eDP-1' scale 1
 
 exec ~/.local/share/tresorit/tresorit-cli start
 exec pipewire &
 exec pipewire-pulse &
 exec pipewire-media-session &
+exec gammastep -l 53.3:6.2 -m wayland &
+
